@@ -1,4 +1,4 @@
-#include "String.hpp"
+#include "String.h"
 
 #include <iostream>
 #include <string>
@@ -6,10 +6,12 @@
 
 int main() {
 
-	std::string s;
+	String text;
 
-	std::string text;
+	text = "Testing";
+	String text2 = text;
 
-	std::cin >> text;
-	std::cout << text << " " << s.Length() << "\n";
+	text.WriteToConsole();
+	std::cout << text.Length() << std::endl;
+	text2.WriteToConsole();
 }

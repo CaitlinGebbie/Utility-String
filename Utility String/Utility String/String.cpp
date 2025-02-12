@@ -1,14 +1,34 @@
-#include <iostream>
 #pragma once
+#include <iostream>
+#include "String.h"
 
-size_t Length() {
+String::String()
+{
+}
 
-	int length;
-	char checkChar;
+String::String(const char* _str)
+{
+	strcpy_s(text, _str);
+}
 
-	for (int i = 0; i < length; i++) {
+String::String(const String& _other)
+{
+	strcpy_s(text, _other.text);
+}
 
-		length = strlen(text);
+String::~String()
+{
+}
 
-	}
+size_t String::Length() const {
+		return strlen(text);
+}
+
+// String& String::ToUpper()
+
+String& String::WriteToConsole()
+{
+	std::cout << text << std::endl;
+
+	return *this;
 }
