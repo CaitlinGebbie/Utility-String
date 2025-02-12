@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\s250020\\source\\repos\\Utility String\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\String.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\String.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "String.cpp",
+              "DocumentMoniker": "C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\String.cpp",
+              "RelativeDocumentMoniker": "Utility String\\String.cpp",
+              "ToolTip": "C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\String.cpp",
+              "RelativeToolTip": "Utility String\\String.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T04:35:12.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "String.hpp",
+              "DocumentMoniker": "C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\String.hpp",
+              "RelativeDocumentMoniker": "Utility String\\String.hpp",
+              "ToolTip": "C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\String.hpp",
+              "RelativeToolTip": "Utility String\\String.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T04:33:59.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\main.cpp",
+              "RelativeDocumentMoniker": "Utility String\\main.cpp",
+              "ToolTip": "C:\\Users\\s250020\\source\\repos\\Utility String\\Utility String\\main.cpp",
+              "RelativeToolTip": "Utility String\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T01:29:30.073Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

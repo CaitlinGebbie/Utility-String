@@ -1,0 +1,8 @@
+﻿  String.cpp
+  main.cpp
+C:\Users\s250020\source\repos\Utility String\Utility String\String.cpp(11,19): error C2065: 'text': undeclared identifier
+C:\Users\s250020\source\repos\Utility String\Utility String\main.cpp(14,32): error C2039: 'Length': is not a member of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xstring(5127,29):
+      see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+  Generating Code...
