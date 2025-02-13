@@ -3,7 +3,7 @@
 class String {
 
 public:
-	char text[100];
+	char text[50];
 	size_t length;
 
 	String();

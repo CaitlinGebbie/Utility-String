@@ -5,13 +5,16 @@
 #include <cctype>
 
 int main() {
+	 
+	String Text_String;
 
-	String text;
+	Text_String = "Testing";
+	//String text2 = text;
 
-	text = "Testing";
-	String text2 = text;
-
-	text.WriteToConsole();
-	std::cout << text.Length() << std::endl;
-	text2.WriteToConsole();
+	Text_String.WriteToConsole();
+	std::cout << Text_String.Length() << std::endl;
+	Text_String.ToUpper();
+	Text_String.ToLower();
+	/*std::cout << text.ToUpper() << std::endl;*/
+	//text2.WriteToConsole();
 }

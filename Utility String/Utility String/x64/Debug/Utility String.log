@@ -1,2 +1,4 @@
-﻿  main.cpp
-  Utility String.vcxproj -> C:\Users\User\Documents\Utility-String\Utility String\x64\Debug\Utility String.exe
+﻿  String.cpp
+C:\Users\s250020\Documents\Utility String\Utility String\Utility String\String.cpp(33,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s250020\Documents\Utility String\Utility String\Utility String\String.cpp(48,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Utility String.vcxproj -> C:\Users\s250020\Documents\Utility String\Utility String\x64\Debug\Utility String.exe
