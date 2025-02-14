@@ -20,7 +20,7 @@ public:
 	String& ToUpper();
 	String& ToLower();
 
-	int FindCharacter(const char _chr) const;
+	int FindCharacter(const char _chr);
 
 	int Replace(const char _find, const char _replace);
 

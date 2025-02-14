@@ -1,4 +1,5 @@
 ﻿  String.cpp
 C:\Users\s250020\Documents\Utility String\Utility String\Utility String\String.cpp(33,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s250020\Documents\Utility String\Utility String\Utility String\String.cpp(48,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s250020\Documents\Utility String\Utility String\Utility String\String.cpp(43,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s250020\Documents\Utility String\Utility String\Utility String\String.cpp(66): warning C4715: 'String::FindCharacter': not all control paths return a value
   Utility String.vcxproj -> C:\Users\s250020\Documents\Utility String\Utility String\x64\Debug\Utility String.exe
