@@ -56,11 +56,6 @@ int String::FindCharacter(const char _chr) {
 	return -1;
 }
 
-	//for (int i = 0; i < strlen(text); i++) {
-
-	//}
-	//return *this;
-
 //int String::Replace(const char _find, const char _replace)
 //{
 //	//return *this;
