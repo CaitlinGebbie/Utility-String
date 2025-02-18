@@ -1,4 +1,5 @@
 #include "String.h"
+
 #include <iostream>
 #include <cctype>
 #include <cstring>
@@ -30,9 +31,7 @@ size_t String::Length() const { // Find the length of the string
 
 String& String::ToUpper() { // Convert all characters to uppercase
 		
-	int length = strlen(text);
-		
-		for (int i = 0; i < strlen(text); i++) {
+		for (int i = 0; i < String::Length(); i++) {
 			putchar(toupper(text[i]));
 		}
 		return *this;
@@ -40,34 +39,58 @@ String& String::ToUpper() { // Convert all characters to uppercase
 
 String& String::ToLower() { // Convert all characters to lowercase
 
-	int length = strlen(text);
-
-	for (int i = 0; i < length; i++) {
+	for (int i = 0; i < String::Length(); i++) {
 		putchar(tolower(text[i]));
-		}
+	}
 	return *this;
 }
 
+<<<<<<< HEAD
 int String::FindCharacter(const char _chr) { // Return the location of the character as an int. If not found, return -1
 	
 	for (int i = 0; i < strlen(text); i++) {
 		
 		int checkChar = text[i];
+=======
+int String::FindCharacter(const char _chr) {
+>>>>>>> f79a72406bfdfeccf2a6d7bf98a9a0e089268987
 
-		if (checkChar == text[1]) {
-			std::cout << text[1] << std::endl;
-		}
+	for (int i = 0; i < String::Length(); i++) {
 
+<<<<<<< HEAD
 		if (checkChar == text['\0']) {
 			return -1;
+=======
+		if (_chr == text[i]) {
+			std::cout << "Finding index " << i << " in the array." << std::endl;
+			return i;
+>>>>>>> f79a72406bfdfeccf2a6d7bf98a9a0e089268987
 		}
 	}
+	return -1;
 }
 
-//int String::Replace(const char _find, const char _replace)
-//{
-//	//return *this;
-//}
+int String::Replace(const char _find, const char _replace) { // Replaces all occurrences of findCharacter with replaceCharacter. Returns the number of replacements.
+		
+	int charIndex = -1;
+
+	for (int i = 0; i < String::Length(); i++) {
+
+		if (_find == text[i]) {
+			
+			charIndex = i;
+		}
+	}
+	
+	for (int i = 0; i < String::Length(); i++) {
+
+		if (charIndex == text[i]) {
+
+			charIndex = _replace;
+		}
+	}
+	return 0;
+}
 
 
 //String& String::ReadFromConsole() const
@@ -75,8 +98,7 @@ int String::FindCharacter(const char _chr) { // Return the location of the chara
 //
 //}
 
-String& String::WriteToConsole()
-{
+String& String::WriteToConsole() {
 	std::cout << text << std::endl;
 
 	return *this;
