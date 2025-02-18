@@ -51,15 +51,33 @@ int String::FindCharacter(const char _chr) {
 
 		if (_chr == text[i]) {
 			std::cout << "Finding index " << i << " in the array." << std::endl;
+			return i;
 		}
 	}
 	return -1;
 }
 
-//int String::Replace(const char _find, const char _replace)
-//{
-//	//return *this;
-//}
+int String::Replace(const char _find, const char _replace) { // Replaces all occurrences of findCharacter with replaceCharacter. Returns the number of replacements.
+		
+	int charIndex = -1;
+
+	for (int i = 0; i < String::Length(); i++) {
+
+		if (_find == text[i]) {
+			
+			charIndex = i;
+		}
+	}
+	
+	for (int i = 0; i < String::Length(); i++) {
+
+		if (charIndex == text[i]) {
+
+			charIndex = _replace;
+		}
+	}
+	return 0;
+}
 
 
 //String& String::ReadFromConsole() const
