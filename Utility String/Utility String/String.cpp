@@ -52,14 +52,13 @@ int String::FindCharacter(const char _chr) { // Return the location of the chara
 	
 	for (int i = 0; i < strlen(text); i++) {
 		
-		int checkNull = text[i];
 		int checkChar = text[i];
 
 		if (checkChar == text[1]) {
 			std::cout << text[1] << std::endl;
 		}
 
-		if (checkNull == text['\0']) {
+		if (checkChar == text['\0']) {
 			return -1;
 		}
 	}
