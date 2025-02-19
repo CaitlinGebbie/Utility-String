@@ -72,24 +72,19 @@ int String::FindCharacter(const char _chr) {
 
 int String::Replace(const char _find, const char _replace) { // Replaces all occurrences of findCharacter with replaceCharacter. Returns the number of replacements.
 		
-	int charIndex = -1;
+	int charIndex;
+	int counter = 0;
 
 	for (int i = 0; i < String::Length(); i++) {
 
-		if (_find == text[i]) {
-			
-			charIndex = i;
-		}
-	}
-	
-	for (int i = 0; i < String::Length(); i++) {
+		if (_find == text[i]) { // if 'e' is in 'Hello'
 
-		if (charIndex == text[i]) {
-
-			charIndex = _replace;
+			charIndex = i; // charIndex is now the location of 'e'
+			i = _replace; // index of 'e' is now 'k'
+			counter =
 		}
+		return counter;
 	}
-	return 0;
 }
 
 
@@ -103,3 +98,13 @@ String& String::WriteToConsole() {
 
 	return *this;
 }
+//for (int i = 0; i < String::Length(); i++) {
+//
+//	charIndex = _replace; // charIndex is 'k'
+//}
+//
+//for (int i = 0; i < String::Length(); i++) {
+//
+//	if (charIndex == text[i]) { // if 'k' is in text[i]
+//
+//		//replaceCounter = 

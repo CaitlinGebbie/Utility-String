@@ -7,19 +7,11 @@
       "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\s250020\\Documents\\Utility String\\Utility String\\Utility String\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\s250020\\Documents\\Utility String\\Utility String\\Utility String\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-=======
       "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
->>>>>>> f79a72406bfdfeccf2a6d7bf98a9a0e089268987
       "RelativeMoniker": "D:0:0:{3DCC37FE-A570-4AE7-84C0-88DA60F9F88F}|Utility String\\Utility String.vcxproj|solutionrelative:Utility String\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -38,14 +30,12 @@
               "Title": "String.cpp",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\String.cpp",
               "RelativeDocumentMoniker": "Utility String\\String.cpp",
-<<<<<<< HEAD
-              "ToolTip": "C:\\Users\\s250020\\Documents\\Utility String\\Utility String\\Utility String\\String.cpp",
-              "RelativeToolTip": "Utility String\\String.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAD0AAAAEAAAAAAAAAA==",
-=======
               "ToolTip": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\String.cpp",
               "RelativeToolTip": "Utility String\\String.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+<<<<<<< HEAD
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAADAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAEsAAAAYAAAAAAAAAA==",
 >>>>>>> f79a72406bfdfeccf2a6d7bf98a9a0e089268987
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-12T04:35:12.731Z",
