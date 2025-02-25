@@ -103,14 +103,22 @@ bool String::operator==(const String& _other) { // Returns true if each characte
 	return false;
 }
 
-//char& String::operator[](size_t _index) { // Returns the character located at position n. If n is less than 0 or greater than the string length, return ‘\0’
-//
-//}
-//
-//const char& String::operator[](size_t _index) const {
-//
-//}
-//
+const char& String::operator[](size_t _index) const { // Returns the character located at position n. If n is less than 0 or greater than the string length, return ‘\0’
+
+
+	for (int i = 0; i < String::Length(); i++) {
+
+		if (_index < 0 || _index > String::Length()) {
+			std::cout << "This doesn't work" << std::endl;
+			return '\0';
+		}
+		else
+			i = _index;
+		std::cout << text[i] << std::endl;
+		return text[i];
+	}
+}
+
 String& String::operator=(const String& _str) { // Replaces the characters in the lhs String with the characters in the rhs String.
 
 	strcpy_s(text, _str.text);

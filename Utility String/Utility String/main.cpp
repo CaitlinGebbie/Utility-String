@@ -11,15 +11,15 @@ int main() {
 
 	Text_String.WriteToConsole();
 	Text_String2.WriteToConsole();
+	std::cout << "\n";
+
+	Text_String.operator[](0);
+	std::cout << "\n";
 
 	Text_String.operator==(Text_String2); // Checks if "Hello" and "Worlds" are the same or different
 
-	Text_String.operator=(Text_String2);
-	std::cout << "\n";
-
 	std::cout << Text_String.Length() << std::endl; // Length of "Hello"
 	std::cout << Text_String2.Length() << std::endl; // Length of "Worlds"
-	std::cout << "\n";
 
 	Text_String.Append(Text_String2); // Adds "Worlds" to the end of "Hello"
 	Text_String.WriteToConsole();
@@ -43,10 +43,6 @@ int main() {
 	std::cout << "Input your name." << std::endl;
 	Text_String.ReadFromConsole();
 	std::cout << "\n";
-
 	Text_String.WriteToConsole();
-	std::cout << "\n";
-
-	Text_String.operator=(Text_String2);
 	std::cout << "\n";
 }

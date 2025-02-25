@@ -29,7 +29,6 @@ public:
 
 	bool operator==(const String& _other); // Returns true if each character in each string is identical.
 
-	char& operator[](size_t _index);
 	const char& operator[](size_t _index) const;
 
 	String& operator=(const String& _str);
