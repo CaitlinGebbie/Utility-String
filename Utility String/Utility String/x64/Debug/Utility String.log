@@ -1,7 +1,6 @@
 ﻿  String.cpp
-C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(116,8): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-  Generating Code...
-C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(120,1): warning C4715: 'String::operator[]': not all control paths return a value
-C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(113,1): warning C4172: returning address of local variable or temporary 
+C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(153,8): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(157,1): warning C4715: 'String::operator[]': not all control paths return a value
+C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(192,1): warning C4715: 'String::operator<': not all control paths return a value
+C:\Users\User\Documents\Utility-String\Utility String\Utility String\String.cpp(150,1): warning C4172: returning address of local variable or temporary 
   Utility String.vcxproj -> C:\Users\User\Documents\Utility-String\Utility String\x64\Debug\Utility String.exe

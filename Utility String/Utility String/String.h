@@ -3,7 +3,7 @@
 class String {
 
 public:
-	char text[50];
+	char* text;
 	size_t length;
 
 	String();
@@ -13,24 +13,34 @@ public:
 	~String();
 
 public:
-	size_t Length() const; // Returns an integer representing the count of characters up to, but not including, the null termination character.
+	// Returns an integer representing the count of characters up to, but not including, the null termination character.
+	size_t Length() const;
 
-	String& Append(const String& _str); // Adds str to the end of the string.
+	// Adds str to the end of the string.
+	String& Append(const String& _str);
 
+	// Convert all characters to uppercase.
 	String& ToUpper(); // Convert all characters to uppercase.
-	String& ToLower(); // Convert all characters to lowercase.
+	// Convert all characters to lowercase.
+	String& ToLower();
 
-	int FindCharacter(const char _chr); // Returns the location of the character as an int. If not found, return -1.
+	// Returns the location of the character as an int. If not found, return -1.
+	int FindCharacter(const char _chr);
 
-	int Replace(const char _find, const char _replace); // Replaces all occurrences of findCharacter with replaceCharacter. Returns the number of replacements.
+	// Replaces all occurrences of findCharacter with replaceCharacter. Returns the number of replacements.
+	int Replace(const char _find, const char _replace);
 
-	String& ReadFromConsole(); // Wait for input in the console window and store the result in the string.
-	String& WriteToConsole(); // Write the string to the console window.
+	// Wait for input in the console window and store the result in the string.
+	String& ReadFromConsole();
+	// Write the string to the console window.
+	String& WriteToConsole();
 
-	bool operator==(const String& _other); // Returns true if each character in each string is identical.
-
+	// Returns true if each character in each string is identical.
+	bool operator==(const String& _other);
+	// Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
 	const char& operator[](size_t _index) const;
-
+	// Replaces the characters in the lhs String with the characters in the rhs String.
 	String& operator=(const String& _str);
+	// Returns true if the lhs String comes before the rhs String alphabetically.
 	bool operator<(const String& _str);
 };

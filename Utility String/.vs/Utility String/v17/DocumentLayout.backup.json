@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "Utility String\\String.cpp",
               "ToolTip": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\String.cpp",
               "RelativeToolTip": "Utility String\\String.cpp",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHAAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAAJ4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-25T02:18:42.088Z",
+              "WhenOpened": "2025-02-26T08:14:38.687Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -45,9 +46,9 @@
               "RelativeDocumentMoniker": "Utility String\\String.h",
               "ToolTip": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\String.h",
               "RelativeToolTip": "Utility String\\String.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-25T02:18:42.423Z",
+              "WhenOpened": "2025-02-26T08:14:41.863Z",
               "EditorCaption": ""
             },
             {
@@ -56,11 +57,11 @@
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\main.cpp",
               "RelativeDocumentMoniker": "Utility String\\main.cpp",
-              "ToolTip": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\main.cpp*",
-              "RelativeToolTip": "Utility String\\main.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\main.cpp",
+              "RelativeToolTip": "Utility String\\main.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-25T02:18:42.425Z",
+              "WhenOpened": "2025-02-26T08:14:35.573Z",
               "EditorCaption": ""
             }
           ]
