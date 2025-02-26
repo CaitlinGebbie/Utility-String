@@ -34,7 +34,7 @@ int main() {
 	std::cout << "\n";
 
 	Text_String.operator=(Text_String2);
-	
+
 	Text_String.ToUpper(); // Convert all characters to uppercase 
 	Text_String.WriteToConsole();
 	Text_String.ToLower(); // Convert all characters to lowercase 

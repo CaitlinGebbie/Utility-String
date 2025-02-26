@@ -110,12 +110,12 @@ int String::Replace(const char _find, const char _replace) {
 String& String::ReadFromConsole() {
 
 	char* newText = new char[length + 1];
-	
+
 	std::string readText;
 	std::getline(std::cin, readText);
 
 	strcpy(newText, readText.c_str()); // Store readText into newText (Converts readText into a char array)
-	
+
 	delete[] text;
 	text = newText;
 
