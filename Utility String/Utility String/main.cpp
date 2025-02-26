@@ -26,23 +26,28 @@ int main() {
 	std::cout << Text_String.Length() << std::endl; // Find the length of "Hello Worlds"
 	std::cout << "\n";
 
-	Text_String.ToUpper(); // Convert all characters to uppercase
-	std::cout << "\n";
-	Text_String.ToLower(); // Convert all characters to lowercase
-	std::cout << "\n";
+	Text_String.ToUpper(); // Convert all characters to uppercase 
+	Text_String.WriteToConsole(); 
+	Text_String.ToLower(); // Convert all characters to lowercase 
+	Text_String.WriteToConsole(); 
+	std::cout << "\n"; 
 
 	int findChar = Text_String.FindCharacter('l'); // Return the location of the character as an int. If not found, return -1
 	std::cout << findChar << std::endl;
-	int replaceChar = Text_String.Replace('l', 'k');
-	std::cout << replaceChar << std::endl;
 	std::cout << "\n";
 
+	Text_String.WriteToConsole();
+	int replaceChar = Text_String.Replace('l', 'k');
+	std::cout << replaceChar << std::endl;
 	Text_String.WriteToConsole();
 	std::cout << "\n";
 
 	std::cout << "Input your name." << std::endl;
 	Text_String.ReadFromConsole();
+	Text_String.WriteToConsole();
 	std::cout << "\n";
+
+	Text_String.operator<(Text_String2);
 	Text_String.WriteToConsole();
 	std::cout << "\n";
 }

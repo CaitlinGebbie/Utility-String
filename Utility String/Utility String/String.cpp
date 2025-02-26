@@ -6,21 +6,29 @@
 #include <string>
 
 String::String() {
+	text = new char[1] {};
+
+	length = 0;
 }
 
 String::String(const char* _str) {
-	strcpy_s(text, _str);
+	length = strlen(_str);
 
+	text = new char[length + 1];
+
+	strcpy(text, _str);
 }
 
 String::String(const String& _other) {
-	strcpy_s(text, _other.text);
+	length = _other.length;
+
+	text = new char[length + 1];
+
+	strcpy(text, _other.text);
 }
 
 String::~String() {
-
-	//delete[] text;
-
+	delete[] text;
 }
 
 size_t String::Length() const { // Find the length of the string
@@ -28,15 +36,36 @@ size_t String::Length() const { // Find the length of the string
 }
 
 String& String::Append(const String& _str) { // Adds _str to the end of the string. Return by reference to *this.
+	
+	size_t newLength = length + _str.length;
+	char* newText = new char[newLength + 1];
 
-	strcat_s(text, _str.text);
+	if (text != nullptr && length > 0) {
+
+		strcpy(newText, text);
+
+	}
+	else {
+		newText[0] = '\0';
+	}
+
+	strcat(newText, _str.text);
+
+	length = newLength;
+
+	delete[] text;
+	text = newText;
+
 	return *this;
 }
 
 String& String::ToUpper() { // Convert all characters to uppercase
 
 	for (int i = 0; i < String::Length(); i++) {
-		putchar(toupper(text[i]));
+
+		if (text[i] >= 97 && text[i] <= 122) {
+			text[i] = text[i] - 32;
+		}
 	}
 	return *this;
 }
@@ -44,7 +73,10 @@ String& String::ToUpper() { // Convert all characters to uppercase
 String& String::ToLower() { // Convert all characters to lowercase
 
 	for (int i = 0; i < String::Length(); i++) {
-		putchar(tolower(text[i]));
+
+		if (text[i] >= 41 && text[i] <= 90) {
+			text[i] = text[i] + 32;
+		}
 	}
 	return *this;
 }
@@ -66,21 +98,21 @@ int String::Replace(const char _find, const char _replace) {
 
 	for (int i = 0; i < String::Length(); i++) {
 
-		if (_find == text[i]) { // if 'o' is in 'Hello'
+		if (_find == text[i]) { // if 'l' is in 'Hello'
 
-			text[i] = _replace; // 'o' is now 'k'
+			text[i] = _replace; // 'l' is now 'k'
 			counter++; // Add to counter
 		}
 	}
 	return counter;
 }
 
-String& String::ReadFromConsole() {
+String& String::ReadFromConsole() { // DYNAMIC MEMORY THIS
 
 	std::string readBuffer;
 	std::getline(std::cin, readBuffer);
 
-	Append(readBuffer.c_str());
+	Append(readBuffer.c_str()); // Connverts the input to console into an array of characters. Appends the array to text.
 
 	return *this;
 }
@@ -103,7 +135,7 @@ bool String::operator==(const String& _other) { // Returns true if each characte
 	return false;
 }
 
-const char& String::operator[](size_t _index) const { // Returns the character located at position n. If n is less than 0 or greater than the string length, return ‘\0’
+const char& String::operator[](size_t _index) const { // Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
 
 
 	for (int i = 0; i < String::Length(); i++) {
@@ -121,7 +153,22 @@ const char& String::operator[](size_t _index) const { // Returns the character l
 
 String& String::operator=(const String& _str) { // Replaces the characters in the lhs String with the characters in the rhs String.
 
-	strcpy_s(text, _str.text);
+	size_t newLength = length + _str.length;
+	char* rhsText = new char[newLength + 1];
+
+	if (text != nullptr && length > 0) {
+
+		strcpy(rhsText, _str.text);
+
+	}
+	else {
+		rhsText[0] = '\0';
+	}
+
+	length = newLength; 
+
+	delete[] text;
+	text = rhsText;
 
 	return *this;
 }
