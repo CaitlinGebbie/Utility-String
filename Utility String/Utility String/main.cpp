@@ -167,4 +167,20 @@ int main() {
 	lessThan = Text_String2.operator<(Text_String);
 	std::cout << "rhs is : " << lessThan << std::endl;
 	std::cout << "\n";
+
+	//------------------------------------------------------------------------------------------------------------
+
+	std::cout << ">> Final test: Compare lhs and rhs. Return true if they are the same. <<" << std::endl;
+
+	Text_String = "Hello";
+	Text_String2 = "Hello";
+
+	std::cout << "lhs is : ";
+	Text_String.WriteToConsole();
+	std::cout << "rhs is : ";
+	Text_String2.WriteToConsole();
+
+	Same = Text_String.operator==(Text_String2); // Checks if lhs and rhs are the same or different
+	std::cout << "Result: " << Same << std::endl;
+	std::cout << "\n";
 }
