@@ -35,8 +35,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAL8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-26T08:14:38.687Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -48,8 +47,7 @@
               "RelativeToolTip": "Utility String\\String.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-26T08:14:41.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T08:14:41.863Z"
             },
             {
               "$type": "Document",
@@ -59,7 +57,7 @@
               "RelativeDocumentMoniker": "Utility String\\main.cpp",
               "ToolTip": "C:\\Users\\User\\Documents\\Utility-String\\Utility String\\Utility String\\main.cpp",
               "RelativeToolTip": "Utility String\\main.cpp",
-              "ViewState": "AgIAAB8AAAAAAAAAAADwvz8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwD8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-26T08:14:35.573Z",
               "EditorCaption": ""
