@@ -61,7 +61,7 @@ String& String::Append(const String& _str) { // Adds _str to the end of the stri
 
 String& String::ToUpper() { // Convert all characters to uppercase
 
-	for (int i = 0; i < String::Length(); i++) {
+	for (int i = 0; i < String::Length(); i++) { 
 
 		if (text[i] >= 97 && text[i] <= 122) {
 			text[i] = text[i] - 32;
@@ -86,7 +86,7 @@ int String::FindCharacter(const char _chr) {
 	for (int i = 0; i < String::Length(); i++) {
 
 		if (_chr == text[i]) {
-			return i; // Return the location index of _chr
+			return i;
 		}
 	}
 	return -1;
@@ -131,12 +131,12 @@ String& String::WriteToConsole() {
 
 bool String::operator==(const String& _other) { // Returns true if each character in each string is identical.
 
-	if (std::strcmp(text, _other.text) == 0) {
-		std::cout << "Same" << std::endl;
+	if (strcmp(text, _other.text) == 0) {
+		//std::cout << "Same" << std::endl;
 		return true;
 	}
 	else
-		std::cout << "Different" << std::endl;
+		//std::cout << "Different" << std::endl;
 	return false;
 }
 
