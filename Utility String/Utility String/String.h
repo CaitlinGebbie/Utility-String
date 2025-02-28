@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstddef>
+
 class String {
 
 private:
@@ -26,7 +28,7 @@ public:
 	String& ToLower();
 
 	// Returns the location of the character as an int. If not found, return -1.
-	int FindCharacter(const char _chr);
+	int FindCharacter(const char _chr) const;
 
 	// Replaces all occurrences of findCharacter with replaceCharacter. Returns the number of replacements.
 	int Replace(const char _find, const char _replace);
@@ -37,11 +39,13 @@ public:
 	String& WriteToConsole();
 
 	// Returns true if each character in each string is identical.
-	bool operator==(const String& _other);
+	bool operator==(const String& _other) const;
+	// Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
+	char& operator[](size_t _index);
 	// Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
 	const char& operator[](size_t _index) const;
 	// Replaces the characters in the lhs String with the characters in the rhs String.
 	String& operator=(const String& _str);
 	// Returns true if the lhs String comes before the rhs String alphabetically.
-	bool operator<(const String& _str);
+	bool operator<(const String& _str) const;
 };

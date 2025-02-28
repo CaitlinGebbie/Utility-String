@@ -32,7 +32,7 @@ String::~String() {
 }
 
 size_t String::Length() const { // Find the length of the string
-	return strlen(text);
+	return length;
 }
 
 String& String::Append(const String& _str) { // Adds _str to the end of the string. Return by reference to *this.
@@ -61,7 +61,7 @@ String& String::Append(const String& _str) { // Adds _str to the end of the stri
 
 String& String::ToUpper() { // Convert all characters to uppercase
 
-	for (int i = 0; i < String::Length(); i++) { 
+	for (int i = 0; i < length; i++) { 
 
 		if (text[i] >= 97 && text[i] <= 122) {
 			text[i] = text[i] - 32;
@@ -72,7 +72,7 @@ String& String::ToUpper() { // Convert all characters to uppercase
 
 String& String::ToLower() { // Convert all characters to lowercase
 
-	for (int i = 0; i < String::Length(); i++) {
+	for (int i = 0; i < length; i++) {
 
 		if (text[i] >= 41 && text[i] <= 90) {
 			text[i] = text[i] + 32;
@@ -81,9 +81,9 @@ String& String::ToLower() { // Convert all characters to lowercase
 	return *this;
 }
 
-int String::FindCharacter(const char _chr) {
+int String::FindCharacter(const char _chr) const {
 
-	for (int i = 0; i < String::Length(); i++) {
+	for (int i = 0; i < length; i++) {
 
 		if (_chr == text[i]) {
 			return i;
@@ -96,7 +96,7 @@ int String::Replace(const char _find, const char _replace) {
 
 	int counter = 0;
 
-	for (int i = 0; i < String::Length(); i++) {
+	for (int i = 0; i < length; i++) {
 
 		if (_find == text[i]) { // if 'l' is in 'Hello'
 
@@ -129,64 +129,64 @@ String& String::WriteToConsole() {
 }
 //-------------------------------------------------------------------------------------------------------------
 
-bool String::operator==(const String& _other) { // Returns true if each character in each string is identical.
+bool String::operator==(const String& _other) const { // Returns true if each character in each string is identical.
 
 	if (strcmp(text, _other.text) == 0) {
-		//std::cout << "Same" << std::endl;
 		return true;
 	}
-	else
-		//std::cout << "Different" << std::endl;
-	return false;
+	else {
+		return false;
+	}
+}
+
+char& String::operator[](size_t _index) {
+
+	if (_index >= 0) {
+		return text[_index];
+	}
+	else {
+		return text[length];
+	}
 }
 
 const char& String::operator[](size_t _index) const { // Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
 
-
-	for (int i = 0; i < String::Length(); i++) {
-
-		if (_index < 0 || _index > String::Length()) {
-			std::cout << "This doesn't work" << std::endl;
-			return '\0';
-		}
-		else
-			i = _index;
-		std::cout << text[i] << std::endl;
-		return text[i];
+	if (_index >= 0) {
+		return text[_index];
+	}
+	else {
+		return text[length];
 	}
 }
 
 String& String::operator=(const String& _str) { // Replaces the characters in the lhs String with the characters in the rhs String.
 
-	size_t newLength = length + _str.length;
-	char* rhsText = new char[newLength + 1];
+	size_t newLength = _str.length; // newLength is the length of _str
+	char* rhsText = new char[newLength + 1]; // rhsText is _str and the new length
 
 	if (text != nullptr && length > 0) {
 
-		strcpy(rhsText, _str.text);
+		strcpy(rhsText, _str.text); // this should copy the contents of rhs to lhs
 
 	}
 	else {
 		rhsText[0] = '\0';
 	}
-
+	
 	length = newLength;
-
+	
 	delete[] text;
 	text = rhsText;
 
 	return *this;
 }
 
-bool String::operator<(const String& _str) { // Returns true if the lhs String comes before the rhs String alphabetically.
+bool String::operator<(const String& _str) const { // Returns true if the lhs String comes before the rhs String alphabetically.
 
 	if (strcmp(text, _str.text) < 0) {
 		return true;
 	}
-	else if (strcmp(text, _str.text) > 0) {
-		return false;
-	}
-	else if (strcmp(text, _str.text) == 0) {
+	else {
 		return false;
 	}
 }
