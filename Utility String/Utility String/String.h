@@ -43,8 +43,6 @@ public:
 	// Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
 	char& operator[](size_t _index);
 	// Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
-	char& operator[](size_t _index);
-
 	const char& operator[](size_t _index) const;
 	// Replaces the characters in the lhs String with the characters in the rhs String.
 	String& operator=(const String& _str);
