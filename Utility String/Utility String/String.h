@@ -39,6 +39,8 @@ public:
 	// Returns true if each character in each string is identical.
 	bool operator==(const String& _other);
 	// Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
+	char& operator[](size_t _index);
+
 	const char& operator[](size_t _index) const;
 	// Replaces the characters in the lhs String with the characters in the rhs String.
 	String& operator=(const String& _str);
