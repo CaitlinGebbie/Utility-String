@@ -37,21 +37,21 @@ size_t String::Length() const { // Find the length of the string
 
 String& String::Append(const String& _str) { // Adds _str to the end of the string. Return by reference to *this.
 
-	size_t newLength = length + _str.length;
+	size_t newLength = length + _str.length; // newLength is text.length + _str.length
 	char* newText = new char[newLength + 1];
 
 	if (text != nullptr && length > 0) {
 
-		strcpy(newText, text);
+		strcpy(newText, text); // length of newText now contains text
 
 	}
 	else {
-		newText[0] = '\0';
+		newText[0] = '\0'; // if newText contains nothing, make it null
 	}
 
-	strcat(newText, _str.text);
+	strcat(newText, _str.text); // newText + _str.text
 
-	length = newLength;
+	length = newLength; // text.length = text.length + _str.length
 
 	delete[] text;
 	text = newText;
@@ -111,11 +111,11 @@ int String::Replace(const char _find, const char _replace) {
 
 String& String::ReadFromConsole() { // store the input to string
 
-	std::string readText;
-	std::getline(std::cin, readText);
+	std::string readText; // init readText
+	std::getline(std::cin, readText); // cin = readText
 
-	size_t newLength = readText.length();
-	char* newText = new char[newLength + 1];
+	size_t newLength = readText.length(); // newLength is length of readtext
+	char* newText = new char[newLength + 1]; // newText is the length of readText + 1 for null
 
 	strcpy(newText, readText.c_str()); // Store readText into newText (Converts readText into a char array)
 
@@ -147,7 +147,7 @@ char& String::operator[](size_t _index) {
 		return text[_index];
 	}
 	else {
-		return text['\0'];
+		return text[length];
 	}
 }
 
@@ -157,14 +157,14 @@ const char& String::operator[](size_t _index) const { // Returns the character l
 		return text[_index];
 	}
 	else {
-		return text['\0'];
+		return text[length];
 	}
 }
 
 String& String::operator=(const String& _str) { // Replaces the characters in the lhs String with the characters in the rhs String.
 
 	size_t newLength = _str.length; // newLength is the length of _str
-	char* rhsText = new char[newLength + 1]; // rhsText is _str and the new length
+	char* rhsText = new char[newLength + 1]; // rhsText is the length of _str + null
 
 	strcpy(rhsText, _str.text); // this should copy the contents of rhs to lhs
 
