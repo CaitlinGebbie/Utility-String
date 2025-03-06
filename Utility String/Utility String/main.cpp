@@ -78,12 +78,14 @@ int main() {
 	std::cout << ">> Find the character located at the index. <<" << std::endl;
 
 	std::cout << "Index 0 in 'helloworlds' is ";
-	Text_String.operator[](0);// This should find 'h'
-	std::cout << "Index 3 in 'helloworlds' is ";
-	Text_String2.operator[](3); // This should find 'l'
-	std::cout << "Index 4 in 'helloworlds' is ";
-	Text_String2.operator[](4); // This should find 'd'
+	std::cout << Text_String.operator[](0);// This should find 'h'
 	std::cout << "\n";
+	std::cout << "Index 3 in 'helloworlds' is ";
+	std::cout << Text_String2.operator[](3); // This should find 'l'
+	std::cout << "\n";
+	std::cout << "Index 4 in 'helloworlds' is ";
+	std::cout << Text_String2.operator[](4); // This should find 'd'
+	std::cout << "\n\n";
 
 	// ReplaceCharacter ------------------------------------------------------------------------------------------------------------
 
@@ -121,6 +123,9 @@ int main() {
 	std::cout << "\n";
 	std::cout << "The new lhs is: ";
 	Text_String.WriteToConsole();
+	std::cout << "\n";
+
+	Text_String.operator[](0);
 	std::cout << "\n";
 
 	std::cout << "Input something for rhs." << std::endl;
