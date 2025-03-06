@@ -2,17 +2,18 @@
 
 class String {
 
-public:
-	char* text;
+private:
+	char* text; // text is a memory address
 	size_t length;
 
+	
+public:
 	String();
 	String(const char* _str);
 	String(const String& _other);
 
 	~String();
 
-public:
 	// Returns an integer representing the count of characters up to, but not including, the null termination character.
 	size_t Length() const;
 
