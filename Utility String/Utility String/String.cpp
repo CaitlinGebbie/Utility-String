@@ -61,7 +61,7 @@ String& String::Append(const String& _str) { // Adds _str to the end of the stri
 
 String& String::ToUpper() { // Convert all characters to uppercase
 
-	for (int i = 0; i < length; i++) { 
+	for (int i = 0; i < length; i++) {
 
 		if (text[i] >= 97 && text[i] <= 122) {
 			text[i] = text[i] - 32;
@@ -85,7 +85,9 @@ int String::FindCharacter(const char _chr) const {
 
 	for (int i = 0; i < length; i++) {
 
+
 		if (_chr == text[i]) {
+
 			return i;
 		}
 	}
@@ -107,12 +109,13 @@ int String::Replace(const char _find, const char _replace) {
 	return counter;
 }
 
-String& String::ReadFromConsole() {
-
-	char* newText = new char[length + 1];
+String& String::ReadFromConsole() { // store the input to string
 
 	std::string readText;
 	std::getline(std::cin, readText);
+
+	size_t newLength = readText.length();
+	char* newText = new char[newLength + 1];
 
 	strcpy(newText, readText.c_str()); // Store readText into newText (Converts readText into a char array)
 
@@ -130,7 +133,6 @@ String& String::WriteToConsole() {
 //-------------------------------------------------------------------------------------------------------------
 
 bool String::operator==(const String& _other) const { // Returns true if each character in each string is identical.
-
 	if (strcmp(text, _other.text) == 0) {
 		return true;
 	}
@@ -141,21 +143,21 @@ bool String::operator==(const String& _other) const { // Returns true if each ch
 
 char& String::operator[](size_t _index) {
 
-	if (_index >= 0) {
+	if (_index <= length) {
 		return text[_index];
 	}
 	else {
-		return text[length];
+		return text['\0'];
 	}
 }
 
 const char& String::operator[](size_t _index) const { // Returns the character located at position _index. If _index is less than 0 or greater than the string length, return ‘\0’
 
-	if (_index >= 0) {
+	if (_index <= length) {
 		return text[_index];
 	}
 	else {
-		return text[length];
+		return text['\0'];
 	}
 }
 
@@ -164,24 +166,17 @@ String& String::operator=(const String& _str) { // Replaces the characters in th
 	size_t newLength = _str.length; // newLength is the length of _str
 	char* rhsText = new char[newLength + 1]; // rhsText is _str and the new length
 
-	if (text != nullptr && length > 0) {
+	strcpy(rhsText, _str.text); // this should copy the contents of rhs to lhs
 
-		strcpy(rhsText, _str.text); // this should copy the contents of rhs to lhs
-
-	}
-	else {
-		rhsText[0] = '\0';
-	}
-	
 	length = newLength;
-	
+
 	delete[] text;
 	text = rhsText;
 
 	return *this;
 }
 
-bool String::operator<(const String& _str) const { // Returns true if the lhs String comes before the rhs String alphabetically.
+bool String::operator<(const String& _str) const {
 
 	if (strcmp(text, _str.text) < 0) {
 		return true;

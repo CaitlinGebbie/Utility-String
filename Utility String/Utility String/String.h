@@ -5,7 +5,7 @@
 class String {
 
 private:
-	char* text;
+	char* text; // text is a memory address
 	size_t length;
 
 	
