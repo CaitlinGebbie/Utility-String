@@ -1,0 +1,32 @@
+Starting test! Current date/time: Fri Mar  7 15:41:34 2025
+ToUpper Test = Pass
+ToLower Test = Pass
+Text_String Length Test = Pass
+Text_Sting2 Length Test = Pass
+Append Test = Pass
+FindCharacter Test = Pass
+operator[] Test = Pass
+ReplaceCharacter Test = Pass
+EqualTo Different Test = Pass
+EqualTo Identical Test = Pass
+Operator(=) Test = Pass
+String Compare LessThan Test = Pass
+String Compare MoreThan Test = Pass
+String Compare Test = Fail
+Test Result: 92.8571% Passed!
+Starting test! Current date/time: Fri Mar  7 15:42:34 2025
+ToUpper Test = Pass
+ToLower Test = Pass
+Text_String Length Test = Pass
+Text_Sting2 Length Test = Pass
+Append Test = Pass
+FindCharacter Test = Pass
+operator[] Test = Pass
+ReplaceCharacter Test = Pass
+EqualTo Different Test = Pass
+EqualTo Identical Test = Pass
+Operator(=) Test = Pass
+String Compare LessThan Test = Pass
+String Compare MoreThan Test = Pass
+String Compare Test = Pass
+Test Result: 100% Passed!

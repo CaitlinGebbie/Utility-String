@@ -3,9 +3,19 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <fstream>
+#include <ctime>
 
 int main() {
 
+	std::ofstream textLog{ "TestLog.txt", std::ios::app };
+	time_t currentTime;
+	time(&currentTime);
+
+	textLog << "Starting test! Current date/time: " << ctime(&currentTime);
+
+	float count = 0;
+	
 	String Text_String = "Hello";
 	String Text_String2 = "Worlds";
 
@@ -22,9 +32,12 @@ int main() {
 	if (Text_String == "HELLO") {
 		Text_String.WriteToConsole();
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "ToUpper Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "ToUpper Test = Fail\n";
 	}
 
 	std::cout << "Convert 'Worlds' to lowercase." << std::endl;
@@ -34,9 +47,12 @@ int main() {
 	if (Text_String2 == "worlds") {
 		Text_String2.WriteToConsole();
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "ToLower Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "ToLower Test = Fail\n";
 	}
 
 	// LENGTH ------------------------------------------------------------------------------------------------------------
@@ -47,18 +63,24 @@ int main() {
 
 	if (Text_String.Length() == 5) {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "Text_String Length Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "Text_String Length Test = Fail\n";
 	}
 
 	std::cout << "The length of 'Worlds' is " << Text_String2.Length() << std::endl; // Length of "Worlds"
 
 	if (Text_String2.Length() == 6) {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "Text_Sting2 Length Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "Text_String2 Length Test = Fail\n";
 	}
 	
 	// APPEND ------------------------------------------------------------------------------------------------------------
@@ -70,9 +92,12 @@ int main() {
 
 	if (Text_String == "HELLOworlds") {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "Append Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "Append Test = Fail\n";
 	}
 
 	// ToLower ------------------------------------------------------------------------------------------------------------
@@ -89,9 +114,12 @@ int main() {
 
 	if (Text_String.FindCharacter('o') == 4) {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "FindCharacter Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "FindCharacter Test = Fail\n";
 	}
 
 	// SUBSCRIPT OPERATOR ([]) ------------------------------------------------------------------------------------------------------------
@@ -104,9 +132,12 @@ int main() {
 
 	if (Text_String.operator[](3) == 'l') {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "operator[] Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "operator[] Test = Fail\n";
 	}
 
 	// ReplaceCharacter ------------------------------------------------------------------------------------------------------------
@@ -122,11 +153,15 @@ int main() {
 	Text_String.WriteToConsole();
 	std::cout << "\n";
 
-	if (replaceChar == 3)
+	if (replaceChar == 3) {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "ReplaceCharacter Test = Pass\n";
+		count = count + 1;
+	}
 
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "ReplaceCharacter Test = Fail\n";
 	}
 
 	// ReadFromConsole ------------------------------------------------------------------------------------------------------------
@@ -140,6 +175,11 @@ int main() {
 	// EQUALITY OPERATOR (==) ------------------------------------------------------------------------------------------------------------
 
 	std::cout << ">> Compare lhs and rhs. 1 for identical, 0 for different. <<" << std::endl;
+
+	bool equalTo = false;
+	bool equalTo2 = false;
+	bool value = false;
+	bool value2 = false;
 	
 	Text_String = "Test";
 	Text_String2 = "Testing";
@@ -159,13 +199,23 @@ int main() {
 
 	else {
 		std::cout << "These are different. Result should show 0.\nTESTING: PASSED\n\n";
+		equalTo = true;
 	}
 
 		if (Same == 0) {
 			std::cout << "VALUE TESTING: PASSED\n\n";
+			value = true;
 		}
 		else {
 			std::cout << "VALUE TESTING: FAILED\n\n";
+		}
+
+		if (equalTo == true && value == true) {
+			textLog << "EqualTo Different Test = Pass\n";
+			count = count + 1;
+	}
+		else {
+			textLog << "EqualTo Different Test = Fail\n";
 		}
 
 	Text_String = "Test";
@@ -180,16 +230,26 @@ int main() {
 
 	if (Text_String == Text_String2) {
 		std::cout << "These are identical. Result should show 1.\nTESTING: PASSED\n\n";
+		equalTo2 = true;
 	}
 	else {
-		std::cout << "These are different. (This shouldn't happen)\nTESTING: PASSED\n\n";
+		std::cout << "These are different. (This shouldn't happen)\nTESTING: FAILED\n\n";
 	}
 
 		if (Same == 1) {
 			std::cout << "VALUE TESTING: PASSED\n\n";
+			value2 = true;
 		}
 		else {
 			std::cout << "VALUE TESTING: FAILED\n\n";
+		}
+
+		if (equalTo2 == true && value2 == true) {
+			textLog << "EqualTo Identical Test = Pass\n";
+			count = count + 1;
+		}
+		else {
+			textLog << "EqualTo Identical Test = Fail\n";
 		}
 
 	// ASSIGNMENT OPERATOR (=) ------------------------------------------------------------------------------------------------------------
@@ -211,9 +271,12 @@ int main() {
 
 	if (Text_String == "Worlds") {
 		std::cout << "TESTING: PASSED\n\n";
+		textLog << "Operator(=) Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "TESTING: FAILED\n\n";
+		textLog << "Operator(=) Test = Fail\n";
 	}
 	
 	// LessThan OPERATOR (<) ------------------------------------------------------------------------------------------------------------
@@ -235,16 +298,32 @@ int main() {
 
 	if (lessThan == true) {
 		std::cout << "lessThan TESTING: PASSED\n\n";
+		textLog << "String Compare LessThan Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "lessThan TESTING: FAILED\n\n";
+		textLog << "String Compare LessThan Test = Fail\n";
 	}
 
 	if (moreThan == false) {
 		std::cout << "moreThan TESTING: PASSED\n\n";
+		textLog << "String Compare MoreThan Test = Pass\n";
+		count = count + 1;
 	}
 	else {
 		std::cout << "moreThan TESTING: FAILED\n\n";
+		textLog << "String Compare MoreThan Test = Fail\n";
 	}
 
+	if (lessThan == true && moreThan == false) {
+		textLog << "String Compare Test = Pass\n";
+		count = count + 1;
+	}
+	else {
+		textLog << "String Compare Test = Fail\n";
+	}
+
+	float percentage = (count / 14) * 100;
+	textLog << "Test Result: " << percentage << "% Passed!\n";
 }
