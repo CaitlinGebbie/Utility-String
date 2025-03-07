@@ -33,6 +33,7 @@ String::~String() {
 
 size_t String::Length() const { // Find the length of the string
 	return length;
+
 }
 
 String& String::Append(const String& _str) { // Adds _str to the end of the string. Return by reference to *this.
@@ -63,8 +64,8 @@ String& String::ToUpper() { // Convert all characters to uppercase
 
 	for (int i = 0; i < length; i++) {
 
-		if (text[i] >= 97 && text[i] <= 122) {
-			text[i] = text[i] - 32;
+		if (text[i] >= 97 && text[i] <= 122) { // if text[i] is in between 'a' to 'z' on the ASCII table
+			text[i] = text[i] - 32; // - 32 to every lowercase ASCII decimal
 		}
 	}
 	return *this;
@@ -74,8 +75,8 @@ String& String::ToLower() { // Convert all characters to lowercase
 
 	for (int i = 0; i < length; i++) {
 
-		if (text[i] >= 41 && text[i] <= 90) {
-			text[i] = text[i] + 32;
+		if (text[i] >= 41 && text[i] <= 90) { // if text[i] is in between 'A' to 'Z' on the ASCII table
+			text[i] = text[i] + 32; // + 32 to every lowercase ASCII decimal
 		}
 	}
 	return *this;
@@ -86,9 +87,13 @@ int String::FindCharacter(const char _chr) const {
 	for (int i = 0; i < length; i++) {
 
 
-		if (_chr == text[i]) {
+		if (_chr == text[i]) { // if _chr is in text[i], return the first i it finds
 
+			std::cout << "The " << text[4] << " is found at " << i << "\n";
 			return i;
+		}
+		else if (_chr != text[i]) {
+
 		}
 	}
 	return -1;
@@ -100,10 +105,14 @@ int String::Replace(const char _find, const char _replace) {
 
 	for (int i = 0; i < length; i++) {
 
-		if (_find == text[i]) { // if 'l' is in 'Hello'
+		if (_find == text[i]) { // if _find is in 'Hello'
 
-			text[i] = _replace; // 'l' is now 'k'
+			text[i] = _replace; // _find is now _replace
 			counter++; // Add to counter
+		}
+
+		else if (_find != text[i]) {
+
 		}
 	}
 	return counter;
