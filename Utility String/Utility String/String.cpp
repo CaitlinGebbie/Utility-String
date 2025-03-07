@@ -128,6 +128,8 @@ String& String::ReadFromConsole() { // store the input to string
 
 	strcpy(newText, readText.c_str()); // Store readText into newText (Converts readText into a char array)
 
+	length = newLength;
+
 	delete[] text;
 	text = newText;
 
